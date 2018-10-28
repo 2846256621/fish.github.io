@@ -1,4 +1,4 @@
-*{
+﻿*{
     padding: 0;
     margin: 0;
 }
@@ -129,7 +129,7 @@ li{
     height: 80px;
     position: absolute;
     left:31%;
-    top:1010px;
+    top:58%;
     font-size: 32px;
     color: #fffe5c;
 }
@@ -145,7 +145,7 @@ li{
     width: 830px;
     height: 300px;
     left: 10%;
-    top:1180px;
+    top:70%;
     font-size: 32px;
     color: #ffe377;
     background-color: rgba(124, 127, 123, 0.7);
@@ -164,10 +164,11 @@ li{
 }
 @keyframes say {
     from{top:1500px}
-    to{top:1180px}
+    to{top:70%}
 }
 #tell{
     margin: 12px 12px ;
+    font-size : 33px;
 }
 .p{
     position:absolute;

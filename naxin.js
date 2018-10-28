@@ -4,6 +4,7 @@ var imgs = document.getElementsByClassName('img');
 var turn = document.getElementsByClassName('turn');
 var title = document.getElementById("title");
 var time = 0,index = 0;
+var show;
 var tell = document.getElementById("tell");
 var p =document.getElementsByClassName("p");
 var say = document.getElementById("say");
@@ -22,16 +23,22 @@ window.onload = function () {
     point.style.animation = 'point 2s 1 ease';
     say.style.animation = 'say 2s 1 ease';
 };
-//题目的出现
-function text() {
-    var str = "前端进阶庄园";
-    var str2 ="来到“庄园”和我们一起成长吧。通过自己的努力，每天收获满满的能量哦，是不是超有成就感呢。" +
+
+    var str ="来到“庄园”和我们一起成长吧。通过自己的努力，每天收获满满的能量哦，是不是超有成就感呢。" +
         "等你长成一棵”大树，你就是传说中的大佬了哦，你也可以做出炫酷的动画，吸人眼球的页面，" +
         "当然也可以给你的天马行空的思想一个很好的展示空间哦。快来加入我们吧，期待见到每个拥有小思想的小阔爱哦ヽ(￣▽￣)ﾉ。";
-    title.innerText = str.substring(0,index++);
-    tell.innerText = str2.substring(0,index++);
+function text(){
+	show = setInterval(showTell,100);
 }
-setInterval(text, 100);
+
+//题目的出现
+function showTell() {
+    tell.innerText = str.substring(0,index++);
+    if(index > str.length)
+      	clearInterval(show);
+}
+
+text();
 
 function change(event) {
     x = event.target;
