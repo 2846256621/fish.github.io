@@ -129,7 +129,7 @@ li{
     height: 80px;
     position: absolute;
     left:31%;
-    top:58%;
+    top:62%;
     font-size: 32px;
     color: #fffe5c;
 }
@@ -137,7 +137,7 @@ li{
     from{
         top:1500px;}
     to{
-        top:58%;
+        top:62%;
     }
 }
 #say{
